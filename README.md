@@ -8,10 +8,16 @@ A simple command line tool for creating and disposing of test accounts for
 By default all accounts will be created on the stage environment. You can use
 the `--env` command line option to target `production` or `stable`.
 
+## Installation
+
+```
+$ pipenv sync
+```
+
 ## Creating a verified test account
 
 ```
-$ pipenv run python fxacli.py create
+$ pipenv run fxacli create
 Account created!
  - 🌐  https://api-accounts.stage.mozaws.net/v1
  - 📧  test-72a888a3f6@restmail.net
@@ -22,6 +28,6 @@ Account verified! 🎉
 ## Destroying a test account
 
 ```
-$ pipenv run python fxacli.py destroy test-72a888a3f6@restmail.net IvOhSLzI
+$ pipenv run fxacli destroy test-72a888a3f6@restmail.net IvOhSLzI
 Account destroyed! 💥
 ```
