@@ -9,7 +9,7 @@ from fxa.tests.utils import TestEmailAccount
 
 
 @click.group()
-@click.option('--env', type=click.Choice(['production', 'stage', 'stable']),
+@click.option('--env', type=click.Choice(ENVIRONMENT_URLS.keys()),
               default='stage', help='Firefox Account environment.')
 @click.pass_context
 def cli(ctx, env):
