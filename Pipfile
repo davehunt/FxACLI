@@ -10,7 +10,8 @@ name = "pypi"
 "e1839a8" = {path = ".", editable = true}
 click = "*"
 crayons = "*"
-pyfxa = "*"
+PyFxA = "*"
 
 
 [dev-packages]
+
