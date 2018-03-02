@@ -3,6 +3,11 @@
 A simple command line tool for creating and disposing of test accounts for
 [Firefox Accounts](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Firefox_Accounts).
 
+[![license](https://img.shields.io/badge/license-MPL%202.0-blue.svg)](https://github.com/davehunt/FxACLI/blob/master/LICENSE.txt)
+[![travis](https://img.shields.io/travis/davehunt/FxACLI.svg?label=travis)](http://travis-ci.org/davehunt/FxACLI/)
+[![updates](https://pyup.io/repos/github/davehunt/FxACLI/shield.svg)](https://pyup.io/repos/github/davehunt/FxACLI/)
+[![Python 3](https://pyup.io/repos/github/davehunt/FxACLI/python-3-shield.svg)](https://pyup.io/repos/github/davehunt/FxACLI/)
+
 ## Installation
 
 ```
