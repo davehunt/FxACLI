@@ -10,8 +10,10 @@ name = "pypi"
 "e1839a8" = {path = ".", editable = true}
 click = "*"
 crayons = "*"
-PyFxA = "*"
+pyfxa = "*"
 
 
 [dev-packages]
 
+"flake8" = "*"
+"flake8-isort" = "*"

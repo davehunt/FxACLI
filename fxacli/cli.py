@@ -4,8 +4,8 @@ import string
 
 import click
 import crayons
-from fxa.core import Client
 from fxa.constants import ENVIRONMENT_URLS
+from fxa.core import Client
 from fxa.errors import ClientError
 from fxa.tests.utils import TestEmailAccount
 
