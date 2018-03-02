@@ -1,0 +1,10 @@
+language: python
+python: 3.6
+install:
+  - pip install -r pipenv.txt
+script:
+  - pipenv check
+  - pipenv sync --dev
+  - pipenv run flake8
+notifications:
+  email: dhunt@mozilla.com
