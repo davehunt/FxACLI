@@ -11,7 +11,7 @@ A simple command line tool for creating and disposing of test accounts for
 ## Installation
 
 ```
-$ pipenv sync
+$ pipenv install
 ```
 
 ## Target environment
