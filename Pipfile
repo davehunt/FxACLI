@@ -8,12 +8,12 @@ name = "pypi"
 [packages]
 
 "e1839a8" = {path = ".", editable = true}
-click = "*"
-crayons = "*"
-pyfxa = "*"
+click = "==6.7"
+crayons = "==0.1.2"
+pyfxa = "==0.5.0"
 
 
 [dev-packages]
 
-"flake8" = "*"
-"flake8-isort" = "*"
+"flake8" = "==3.5.0"
+"flake8-isort" = "==2.4"
