@@ -1,4 +1,6 @@
 __pycache__
-*.egg-info
 .accounts
+.eggs
+*.egg-info
+dist
 Pipfile.lock
