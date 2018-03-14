@@ -4,7 +4,16 @@ install:
   - pip install -r pipenv.txt
 script:
   - pipenv check
-  - pipenv sync --dev
+  - pipenv install --dev
   - pipenv run flake8
+deploy:
+  provider: pypi
+  user: davehunt
+  password:
+    secure: "DDeQZ/25GeObDETnhGKlTd/yB7zKVl2gVkCI9sswyochqxCqeokGtkr96T5PTbaxvJxXf31w0h8aokfe/Ko3vpUGHP95MghH8I1cwh6E8YMnQdljmN63vWuKxLAajt10QmDKIRZEJ58CzWx7CRSCp6dbFltJmpzG4m+bQP6qiHegBlRC8hgujSl4Xx262NESBiRvnRgLJ8Y4W+Aofp4QQMcVefJLhaGwqUDZpxKLHYFAVLDa4PywczCseANk0OOQDI2GVF2ju2tklHBeO2zf4t6hk4+ldWpd+LnlXLX824pSrfe37nGj6kF1QUnVxcnnksj6XkfHIS1bx+m0kzDniRUUtF/HALh0H1gVn1DvOtuKFIs/Dul1i6TqdAh+jYU2u7Ctza0ga+Z6+Bcs5upVz8iHg4ahh7qdOP7XTv4/KZuMuWl/Mg/h36tVEdlZ/KNzRzLndcDCAGG7zsz+TinysAgWvKri7k1OJZQYjc3TYzA3q9sEkLpZf1z5jY58b5CT3zwuXXgwe6lMY5mcNXG5ZPRyTLSWPS5mBpJJGkngm8uUAdG2Vwzu/yQTrJJhXMBGiu1B5i2Fv73VJjLJ0j6ouYIKmU0DcNomu35prLYND8OZ5DL7t0iaw2gH8y3SgraPJ1pCECc2y3MwddL7a9jcUjxNp2Mvdz03X+CDdBZQp7Y="
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
+    repo: davehunt/FxACLI
 notifications:
   email: dhunt@mozilla.com

@@ -2,15 +2,16 @@ from setuptools import find_packages, setup
 
 setup(
     name='fxacli',
-    version='1.0.0',
-    description='Create and destroy test accounts for Firefox Accounts.',
-    long_description=open('README.md').read(),
+    use_scm_version=True,
+    description='Create and destroy test accounts for Firefox Accounts',
+    long_description=open('README.rst').read(),
     author='Dave Hunt',
     author_email='dhunt@mozilla.com',
     url='https://github.com/davehunt/fxacli',
     packages=find_packages(exclude=['tests']),
     entry_points={'console_scripts': ['fxacli=fxacli:cli']},
     install_requires=['click', 'crayons', 'PyFxA'],
+    setup_requires=['setuptools_scm'],
     license='Mozilla Public License 2.0 (MPL 2.0)',
     keywords='fxa firefox accounts mozilla',
     classifiers=[
