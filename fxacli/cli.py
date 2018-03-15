@@ -40,12 +40,14 @@ def create(ctx):
 
 
 @cli.command()
+@click.option('--all', '_all', is_flag=True, help='Destroy all known accounts')
 @click.option('--email', help='Email address of Firefox Account user')
 @click.option('--password', help='Password of Firefox Account user')
 @click.pass_context
-def destroy(ctx, email, password):
+def destroy(ctx, _all, email, password):
     """Destroy a Firefox Account."""
-    accounts = load()
+    accounts = []
+    stored = load()
 
     try:
         if email and password:
@@ -53,35 +55,42 @@ def destroy(ctx, email, password):
                 'url': ctx.obj['URL'],
                 'email': email,
                 'password': password}
-            accounts.remove(account)
+            accounts.append(account)
+            stored.remove(account)
         elif email:
             click.echo('You must specify a {}! 🔑'.format(
                 crayons.magenta('--password')))
             exit(1)
         else:
-            account = accounts.pop()
+            if _all and stored:
+                accounts.extend(stored)
+                stored = []
+            else:
+                accounts.append(stored.pop())
     except ValueError:
         pass  # account unknown to .accounts
     except IndexError:
         click.echo('No account to destroy! 🎻')
         exit(1)
 
-    client = Client(account['url'])
-
-    try:
-        client.destroy_account(account['email'], account['password'])
-        click.echo('Account {}! 💥\n{}'.format(
-            crayons.red('destroyed'),
-            render(account['url'], account['email'], account['password'])))
-    except ClientError as e:
-        if e.errno == 102:
-            click.echo('Account {}! 🔍\n{}'.format(
-                crayons.cyan('unknown'),
+    for account in accounts:
+        client = Client(account['url'])
+        try:
+            client.destroy_account(account['email'], account['password'])
+            click.echo('Account {}! 💥\n{}'.format(
+                crayons.red('destroyed'),
                 render(account['url'], account['email'], account['password'])))
-        else:
-            raise
+        except ClientError as e:
+            if e.errno == 102:
+                click.echo('Account {}! 🔍\n{}'.format(
+                    crayons.cyan('unknown'),
+                    render(account['url'],
+                           account['email'],
+                           account['password'])))
+            else:
+                raise
 
-    save(accounts)
+    save(stored)
 
 
 def render(url, email, password):
