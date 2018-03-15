@@ -61,6 +61,8 @@ The most recently created account can be destroyed by simply running:
    - 📧  test-72a888a3f6@restmail.net
    - 🔑  IvOhSLzI
 
+To destroy all accounts created using the tool, pass the ``--all`` flag.
+
 To destroy a specific account, or one not created using this tool, you must
 specify ``--email`` and ``--password`` options.
 
