@@ -9,7 +9,7 @@ name = "pypi"
 
 click = "==6.7"
 crayons = "==0.1.2"
-pyfxa = "==0.5.0"
+pyfxa = "==0.6.0"
 
 
 [dev-packages]
