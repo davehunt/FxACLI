@@ -1,24 +1,14 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
-click = "==6.7"
-crayons = "==0.1.2"
-pyfxa = "==0.6.0"
-
+click = "*"
+crayons = "*"
+pyfxa = "*"
+fxacli = {editable = true, path = "."}
 
 [dev-packages]
-
-flake8 = "==3.5.0"
-flake8-isort = "==2.5"
-
-
-[packages.e1839a8]
-
-path = "."
-editable = true
+flake8 = "*"
+flake8-isort = "*"

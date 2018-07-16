@@ -3,4 +3,3 @@ __pycache__
 .eggs
 *.egg-info
 dist
-Pipfile.lock
