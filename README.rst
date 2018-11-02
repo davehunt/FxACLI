@@ -16,12 +16,9 @@ A simple command line tool for creating and disposing of test accounts for
 .. image:: https://img.shields.io/github/issues-raw/davehunt/FxACLI.svg
    :target: https://github.com/davehunt/FxACLI/issues
    :alt: Issues
-.. image:: https://pyup.io/repos/github/davehunt/FxACLI/shield.svg
-   :target: https://pyup.io/repos/github/davehunt/FxACLI/
+.. image:: https://api.dependabot.com/badges/status?host=github&repo=davehunt/FxACLI
+   :target: https://dependabot.com
    :alt: Updates
-.. image:: https://pyup.io/repos/github/davehunt/FxACLI/python-3-shield.svg
-   :target: https://pyup.io/repos/github/davehunt/FxACLI/
-   :alt: Python 3
 
 Installation
 ------------
