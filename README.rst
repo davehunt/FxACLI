@@ -19,6 +19,8 @@ A simple command line tool for creating and disposing of test accounts for
 .. image:: https://api.dependabot.com/badges/status?host=github&repo=davehunt/FxACLI
    :target: https://dependabot.com
    :alt: Updates
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/ambv/black
 
 Installation
 ------------
